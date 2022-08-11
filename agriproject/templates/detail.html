@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+  <div class="row">
+     <div class="col-md-6"><br>
+        <img src="{{agr.img.url}}" width="300" height="300">
+     </div>
+   <div class="col-md-6"><br>
+    <h2>{{agr.name}}</h2>
+    <h6>{{agr.use}}<h6><br>
+    <i>{{agr.About}}</i><br>
+        <a class="btn btn-outline-success" href="{% url 'agriapp:update' agr.id %}" type="button">Update</a>
+        <a class="btn btn-danger" href="{% url 'agriapp:delete' agr.id %}" type="button">Delete</a>
+
+
+   </div>
+  </div>
+</div>
+{% endblock %}

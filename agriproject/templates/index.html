@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    {% for i in agri_list %}
+    <div class="col-md-3">
+        <div class="card mt-4">
+            <img src="{{i.img.url}}" class="card-img-top"  alt=""  height="200px">
+            <div class="card-body">
+            <h5 class="card-title">{{i.name}}</h5>
+            <a href="{% url 'agriapp:detail' i.id %}" class="btn btn-primary">Explore</a>
+        </div>
+            <br>
+        </div>
+    </div>
+             {% endfor %}
+</div>
+{% endblock %}
